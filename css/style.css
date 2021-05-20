@@ -93,7 +93,7 @@
     }
     
     body {
-        background: #e42222;
+        /* background: #e42222; */
         font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     }
     
@@ -109,7 +109,8 @@
     }
     
     .wrapper {
-        background: bisque;
+        /* background: url('/images/Morrison_big.jpg') center center / cover no-repeat; */
+        /* background-color: rgba(10, 10, 10, 0.8); */
         /* margin: 40px 10px; */
         /* height: 100%; */
         padding: 10px 0;
@@ -183,6 +184,7 @@
         align-items: center;
         min-height: 200px;
         background-color: darkgray;
+        background: repeating-linear-gradient(45deg, orange, orange 12px, white 12px, white 24px);
     }
     
     .menu__item {
@@ -209,7 +211,17 @@
     }
     
     .__link4 {
-        background-color: blueviolet;
+        background-color: #000;
+        background: -webkit-radial-gradient(0px 0px, circle, blueviolet, #000);
+        /* transition: all ease 10.5s; */
+    }
+    
+    .__link4:hover {
+        /* transition: all ease 10.5s; */
+        background: -webkit-radial-gradient(0px 20px, circle, blueviolet, #000);
+        width: 150px;
+        /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8); */
+        /* scale: 50%; */
     }
     /* // флекс список заданий */
     
@@ -271,29 +283,86 @@
         display: flex;
         flex-direction: column;
         /* justify-content: center; */
+        background: url('/images/Morrison_big.png') center center / cover no-repeat;
     }
     
     .game__area__top {
         line-height: 2rem;
+        background-color: rgba(65, 11, 11, 0.5);
+    }
+    
+    .game__area__status {}
+    
+    .status_ul {
+        display: flex;
+    }
+    
+    .status_li {
+        margin: 0 1em;
+    }
+    
+    .status_li_1 {}
+    
+    .status_li_2 {}
+    
+    .status_li_3 {}
+    
+    .status_li_4 {
+        margin-left: auto;
     }
     
     .game__area__content {
-        background: url('/images/майк.jpg') top center / contain no-repeat;
         width: 100%;
-        min-height: 200px;
+        min-height: 250px;
+        position: relative;
     }
     
     .game__area__controls {
         /* background: url('/images/майк.jpg') top center / cover no-repeat; */
         background-color: darkgray;
-        width: 70%;
-        height: 30px;
-        align-self: center;
-        margin: 10px 0;
+        width: 100px;
+        height: 20px;
+        /* align-self: center; */
+        /* margin: 10px 0; */
         /* padding: auto 0; */
-        border: 2px solid whitesmoke;
+        border: 1px solid whitesmoke;
         border-radius: 10px;
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0px -3px 8px rgba(0, 0, 0, 0.8);
+        position: absolute;
+        bottom: 0%;
+        left: 0px;
+        /* display: none; */
     }
     
-    .game__area__footer {}
+    .__hidden {
+        display: none;
+    }
+    
+    .game__area__footer {
+        background-color: rgba(65, 11, 11, 0.5);
+        text-align: left;
+        padding-left: 1em;
+    }
+    
+    .game__area__ball {
+        /* background-color: seashell; */
+        /* height: 20px;
+        width: 20px;
+        border-radius: 45%; */
+        margin: 0;
+        /* position: relative; */
+        /* position: relative; */
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        /* top: -50%; */
+        display: block;
+        background: black;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        margin: 0;
+        background: -webkit-radial-gradient(25px 10px, circle, #5cabff, #000);
+        /* background: -moz-radial-gradient(10px 10px, circle, #5cabff, #000);
+        background: radial-gradient(10px 10px, circle, #5cabff, #000); */
+    }

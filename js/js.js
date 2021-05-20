@@ -30,26 +30,23 @@
 // console.log(head);
 
 const button_ok = document.getElementById('button__ok');
-console.log(button_ok);
+const mycontrol = document.getElementById('#control');
 
+function hideControl(params) {
 
-function changeH1Color(event) {
-    const H1_1 = document.getElementsByClassName('h1_1');
-    // console.log(H1_1);
-
-
-    H1_1[0].textContent = "Привет, это начало курса по JS!";
-
+    mycontrol.classList.toggle('__hidden');
 }
+button_ok.addEventListener('click', hideControl);
 
-// button_ok.onclick = changeH1Color;
-button_ok.addEventListener('click', changeH1Color);
+// document.addEventListener('DOMContentLoaded', () => {
+//     console.log('ok');
+// })
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('ok');
-})
+// button_ok.addEventListener('mousemove', (ev) => {
+//     console.log(`x: ${ev.pageX} y: ${ev.pageY}`);
+// })
 
-button_ok.addEventListener('mousemove', (ev) => {
+mycontrol.addEventListener('mousemove', (ev) => {
     console.log(`x: ${ev.pageX} y: ${ev.pageY}`);
 })
 
@@ -62,12 +59,3 @@ for (let i = 0; i < li_elements.length; i++) {
         li_elements[i].classList.toggle('through');
     })
 }
-
-
-// li_elements.forEach(element => {
-
-//     console.log(element);
-//     element.addEventListener('click', () => {
-//         element.classlist.toggle('.through');
-//     })
-// });
