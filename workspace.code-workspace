@@ -1,0 +1,23 @@
+{
+    "folders": [
+		{
+			"path": "."
+		}
+	],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "1"
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+
+            {
+                "type": "chrome",
+                "request": "launch",
+                "name": "Launch Chrome against localhost",
+                "url": "http://localhost:5500",
+                "webRoot": "${workspaceFolder}"
+            }
+        ]
+    }
+}
