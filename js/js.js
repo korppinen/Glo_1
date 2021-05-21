@@ -31,12 +31,21 @@
 
 const button_ok = document.getElementById('button__ok');
 const mycontrol = document.getElementById('#control');
+const ball = document.getElementById('ball');
+
+// console.log(1 == 2 ? 'yes' : 'no');
 
 function hideControl(params) {
 
     mycontrol.classList.toggle('__hidden');
 }
+
 button_ok.addEventListener('click', hideControl);
+ball.addEventListener('mouseover', () => {
+    ball.classList.toggle('change_ball_shadow');
+})
+
+
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     console.log('ok');

@@ -147,6 +147,7 @@
         border-radius: 50%;
         box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
         transition: all 0.5s ease;
+        overflow: hidden;
     }
     
     .content__link a:active,
@@ -212,14 +213,19 @@
     
     .__link4 {
         background-color: #000;
-        background: -webkit-radial-gradient(0px 0px, circle, blueviolet, #000);
+        /* background: -webkit-radial-gradient(0px 0px, circle, blueviolet, #000); */
+        /* background: radial-gradient(0px 0px, circle, blueviolet, #000);
+        background: -webkit-linear-gradient(top, #ffff00 0%, #00ff00 100%); */
+        background: radial-gradient(circle at 50% 50%, #c4c425, #333 25%, #eee 35%, #333 65%);
         /* transition: all ease 10.5s; */
     }
     
     .__link4:hover {
         /* transition: all ease 10.5s; */
-        background: -webkit-radial-gradient(0px 20px, circle, blueviolet, #000);
-        width: 150px;
+        /* background: -webkit-radial-gradient(0px 20px, circle, blueviolet, #000); */
+        /* background: salmon; */
+        background: radial-gradient(circle at 50% 50%, #ffff00, #333 25%, #eee 35%, #333 65%);
+        /* width: 150px; */
         /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8); */
         /* scale: 50%; */
     }
@@ -345,13 +351,7 @@
     }
     
     .game__area__ball {
-        /* background-color: seashell; */
-        /* height: 20px;
-        width: 20px;
-        border-radius: 45%; */
         margin: 0;
-        /* position: relative; */
-        /* position: relative; */
         position: absolute;
         top: 0%;
         left: 0%;
@@ -359,10 +359,18 @@
         display: block;
         background: black;
         border-radius: 50%;
-        height: 50px;
-        width: 50px;
+        height: 100px;
+        width: 100px;
         margin: 0;
-        background: -webkit-radial-gradient(25px 10px, circle, #5cabff, #000);
-        /* background: -moz-radial-gradient(10px 10px, circle, #5cabff, #000);
-        background: radial-gradient(10px 10px, circle, #5cabff, #000); */
+        background: -webkit-radial-gradient(50px 30px, circle, #5cabff, #000);
+        transition: all 0.5s ease;
+    }
+    
+    .change_ball_shadow {
+        background: -webkit-radial-gradient(50px 50px, circle, #5cabff, #000);
+    }
+    /* //canvas game */
+    
+    .canvas_game {
+        width: 100%;
     }
