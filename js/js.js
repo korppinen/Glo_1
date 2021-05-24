@@ -33,7 +33,16 @@ const button_ok = document.getElementById('button__ok');
 const mycontrol = document.getElementById('#control');
 const ball = document.getElementById('ball');
 
-// console.log(1 == 2 ? 'yes' : 'no');
+let arr = new Array(1, 2, 'Привет', Math.PI, 1 == 2);
+
+// for (let index = 0; index < arr.length; index++) {
+//     const element = arr[index];
+//     console.log(element);
+// }
+
+arr.forEach(element => {
+    console.log(element);
+});
 
 function hideControl(params) {
 

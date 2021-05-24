@@ -11,7 +11,7 @@ let game = {
         this.ctx = canvas.getContext('2d');
         this.sprites.background = new Image();
         this.sprites.background.src = "images/woman_pop.jpg";
-
+        // this.sprites.background.
         this.run();
 
     },
