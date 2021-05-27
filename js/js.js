@@ -1,3 +1,4 @@
+'use strict';
 // alert('Hello Dimas!');
 // let int = 125;
 // console.log(int);
@@ -30,19 +31,23 @@
 // console.log(head);
 
 const button_ok = document.getElementById('button__ok');
+const button_1 = document.getElementById('button__1');
+const button_2 = document.getElementById('button__2');
+const button_3 = document.getElementById('button__3');
+const button_4 = document.getElementById('button__4');
 const mycontrol = document.getElementById('#control');
 const ball = document.getElementById('ball');
 
-let arr = new Array(1, 2, 'Привет', Math.PI, 1 == 2);
+// let arr = new Array(1, 2, 'Привет', Math.PI, 1 == 2);
 
 // for (let index = 0; index < arr.length; index++) {
 //     const element = arr[index];
 //     console.log(element);
 // }
 
-arr.forEach(element => {
-    console.log(element);
-});
+// arr.forEach(element => {
+//     console.log(element);
+// });
 
 function hideControl(params) {
 
@@ -50,6 +55,7 @@ function hideControl(params) {
 }
 
 button_ok.addEventListener('click', hideControl);
+
 ball.addEventListener('mouseover', () => {
     ball.classList.toggle('change_ball_shadow');
 })
@@ -64,9 +70,9 @@ ball.addEventListener('mouseover', () => {
 //     console.log(`x: ${ev.pageX} y: ${ev.pageY}`);
 // })
 
-mycontrol.addEventListener('mousemove', (ev) => {
-    console.log(`x: ${ev.pageX} y: ${ev.pageY}`);
-})
+// mycontrol.addEventListener('mousemove', (ev) => {
+//     console.log(`x: ${ev.pageX} y: ${ev.pageY}`);
+// })
 
 const li__area = document.querySelector('ul');
 const li_elements = li__area.querySelectorAll('li');
@@ -77,3 +83,99 @@ for (let i = 0; i < li_elements.length; i++) {
         li_elements[i].classList.toggle('through');
     })
 }
+
+
+// функции
+
+const my = () => {
+    console.log('Привет');
+}
+let i = 5;
+const my1 = function my3() {
+
+    console.log('Привет1');
+}
+
+function my2(name1 = 'Дима', age = 2, married = true) {
+
+    console.log(`Привет, ${name1}! Ты ${married ? '':'не '}женат`);
+}
+
+
+// замена текста по кнопке 1
+let myFlag = true;
+let Text1 = `Teatteriharrastaja Antti Kurvinen nousee tiede- ja kulttuuriministeriksi Saarikon tilalle: ”Draaman kaarien ymmärtämisestä on politiikassakin hyötyä”`;
+let Text2 = `Kun vauva herää 14 kertaa yössä, vanhempi on valmis epätoivoisiin tekoihin – Tämän teimme toisen lapsen unen kanssa toisin, ja se auttoi`;
+
+function showResult(event, TextFor = 'no text') {
+    let i = document.getElementById('result');
+    if (myFlag) {
+        i.innerText = Text1;
+        myFlag = false;
+    } else {
+        i.innerText = Text2;
+        myFlag = true;
+    }
+}
+button_1.addEventListener('click', showResult);
+
+const showFunc = (TextToShow) => {
+    let i = document.getElementById('result');
+    i.innerText = TextToShow;
+}
+
+
+
+let arr = ['Ворона', 1, true];;
+(function(...arr) {
+    console.log(my2(...arr));
+
+})()
+
+// (() => console.log(my2(...arr)))()
+
+
+// вложенные и замыкания
+
+const car = {
+        brand: 'Ford',
+        model: 'Focus',
+        start: function() {
+            console.log(this.brand + ' gogogo');
+        }
+    }
+    // car.start();
+
+
+function makeCounter() {
+    function count() {
+        return count.currentCounter++;
+    }
+    count.currentCounter = 1;
+    return count;
+}
+
+// let c1 = makeCounter();
+// console.log(c1());
+// console.log(c1());
+
+//
+
+const dog = (name) => {
+    const say = `hello ${name}`;
+
+    return () => console.log(say)
+
+}
+
+let a = dog('TJ_1');
+let b = dog('TJ_2');
+
+a();
+b();
+
+arr = [1, 2, 3];
+
+// const test = el => el > 0;
+console.log(arr.filter(el => el < 2));
+showFunc(arr.every(el => el < 2));
