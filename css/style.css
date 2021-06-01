@@ -434,7 +434,6 @@
     .fullpage {
         width: 100%;
         min-height: 100vh;
-        background-color: black;
     }
     
     .fullpage__content {
@@ -447,4 +446,8 @@
         /* display: flex; */
         /* justify-content: center; */
         /* align-items: center; */
+    }
+    
+    .__fullpage_1 {
+        background-color: aquamarine;
     }

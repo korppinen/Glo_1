@@ -1,11 +1,14 @@
 {
     "folders": [
-		{
-			"path": "."
-		}
-	],
+        {
+            "path": "."
+        },
+        {
+            "path": "..\\Pavlova"
+        }
+    ],
     "settings": {
-        "liveServer.settings.multiRootWorkspaceName": "1"
+        "liveServer.settings.multiRootWorkspaceName": "Pavlova"
     },
     "launch": {
         "version": "0.2.0",

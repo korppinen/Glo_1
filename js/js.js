@@ -124,6 +124,14 @@ const showFunc = (TextToShow) => {
     i.innerText = TextToShow;
 }
 
+const showFunc1 = (TextToShow, index = 1) => {
+    let i = document.getElementById('result');
+    setTimeout(() => {
+        i.innerText = TextToShow;
+    }, 500 * index);
+
+}
+
 
 
 let arr = ['Ворона', 1, true];;
@@ -175,7 +183,57 @@ a();
 b();
 
 arr = [1, 2, 3];
+arr.unshift(0);
+arr.push(4);
+
 
 // const test = el => el > 0;
-console.log(arr.filter(el => el < 2));
-showFunc(arr.every(el => el < 2));
+// console.log(arr.filter(el => el < 2));
+// showFunc(arr.map(el => el * 2));
+
+// arr.forEach(element => {
+
+//     setInterval(() => {
+
+//     }, 2000);
+
+// });
+
+for (let index = 0; index < arr.length; index++) {
+    showFunc1(arr[index], index);
+
+}
+
+for (const [index, value] of arr.entries()) {
+    console.log(`Это ${index}`);
+}
+
+for (const key in car) {
+    if (Object.hasOwnProperty.call(car, key)) {
+        const element = car[key];
+        console.log(`Это ${key} ${car[key]}`);
+
+    }
+}
+
+const operations = [];
+for (let g = 0; g < 5; g++) {
+    operations.push(() => {
+        console.log(g);
+    })
+}
+for (const operation of operations) {
+    operation();
+}
+
+// объекты 28.05.2021
+function carObj() {
+    let brand = 'Ford';
+    let model = 'Focus';
+    this.start = function() {
+        console.log(brand + ' gogogo');
+    }
+};
+
+let mycar = new carObj();
+console.log(mycar.start());
